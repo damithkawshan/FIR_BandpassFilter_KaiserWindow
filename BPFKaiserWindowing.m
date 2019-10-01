@@ -3,6 +3,8 @@ close all;
 clear all;
 clc
 
+%%%%% Here the below is done to randomly generate parameters for Kaiser Window
+
 indx=[1 6 0 1 3 4] % input your index no as a matrix
 
 % getting A B C 
