@@ -3,6 +3,7 @@ close all;
 clear all;
 clc
 
+% for this some parameters are calculated using the numbers in the array indx
 indx=[1 6 0 1 3 4] % input your index no as a matrix
 
 % getting A B C 
@@ -25,6 +26,7 @@ L=2048;% no of samples for plot input signals
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%Kaiser Window Generation%%%%%%%%%%%%%%%%%%%%%%%
 %%
+% defining parameters as needed
 % get critical transition width
 Bt=min((Wp1-Wa1),(Wa2-Wp2));
 
@@ -169,7 +171,7 @@ hw_n1(floor(L/2)-M:floor(L/2)+M)=hw_n;
 %filter the signal
 y_n=conv(x_n,hw_n,'full');
 
-%plot results
+%plot results using subplots
 figure;
 subplot(3,1,1);plot(n,x_n);
 ylim([min(x_n) max(x_n)]);xlim([0 L]);xlabel('Samples (n)');ylabel('Amplitude');title('Input signal');
