@@ -39,7 +39,7 @@ delt_A=10^(-0.05*A_a);
 
 delta=min(delt_P,delt_A);
 
-%actual stopband attenuation & passband attenuation calculation
+%actual attenuation of the stopband & passband attenuation calculation
 Aa= - 20*log10(delta);
 
 %get parameter alpha
